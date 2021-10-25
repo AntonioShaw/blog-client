@@ -52,7 +52,7 @@ export default function Comments(props) {
   return (
     <div>
       <div>
-        hi
+        
         {comments.map((comment) => {
           return (
             <div key={comment.id}>

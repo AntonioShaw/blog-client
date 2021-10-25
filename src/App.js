@@ -80,6 +80,9 @@ function App() {
             <Route path="/" exact>
               <Home />
             </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
             <Route path="/login">
               <Login />
             </Route>

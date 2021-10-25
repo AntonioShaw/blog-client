@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Paper } from '@material-ui/core';
 import Comments from '../components/Comments';
+import Blog from './Blog';
+
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
@@ -11,7 +13,7 @@ export default function Home() {
       .then((data) => {
         setPosts(data);
       });
-  }, []);
+  }, [posts]);
 
   const styling = {
     marginBottom: '2em'
@@ -19,7 +21,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1>A1 Best React Blog</h1>
+      <h1>TonioFolio: A React Blog</h1>
       {posts.map((post) => {
         return (
           <Paper key={post.id} elevation={4} style={styling}>
@@ -30,6 +32,7 @@ export default function Home() {
           </Paper>
         );
       })}
+      <Blog />
     </div>
   );
 }

@@ -33,7 +33,7 @@ export default function Blog() {
         if (data.error) {
           alert(data.error);
         } else {
-          history.push('/');
+          history.push('/home');
         }
       });
   };
